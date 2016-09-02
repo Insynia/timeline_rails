@@ -1,4 +1,8 @@
-[![Build Status](https://travis-ci.org/Insynia/timeline-rails.svg?branch=master)](https://travis-ci.org/Insynia/timeline-rails) [![Coverage Status](https://coveralls.io/repos/github/Insynia/timeline-rails/badge.svg?branch=master)](https://coveralls.io/github/Insynia/timeline-rails?branch=master) [![Code Climate](https://codeclimate.com/github/Insynia/timeline-rails/badges/gpa.svg)](https://codeclimate.com/github/Insynia/timeline-rails) [![Test Coverage](https://codeclimate.com/github/Insynia/timeline-rails/badges/coverage.svg)](https://codeclimate.com/github/Insynia/timeline-rails/coverage) [![Dependency Status](https://gemnasium.com/badges/github.com/Insynia/timeline-rails.svg)](https://gemnasium.com/github.com/Insynia/timeline-rails) [![security](https://hakiri.io/github/Insynia/timeline-rails/master.svg)](https://hakiri.io/github/Insynia/timeline-rails/master)
+[![Build Status](https://travis-ci.org/Insynia/timeline-rails.svg?branch=master)](https://travis-ci.org/Insynia/timeline-rails)
+[![Coverage Status](https://coveralls.io/repos/github/Insynia/timeline-rails/badge.svg?branch=master)](https://coveralls.io/github/Insynia/timeline-rails?branch=master)
+[![Code Climate](https://codeclimate.com/github/Insynia/timeline-rails/badges/gpa.svg)](https://codeclimate.com/github/Insynia/timeline-rails)
+[![Dependency Status](https://gemnasium.com/badges/github.com/Insynia/timeline-rails.svg)](https://gemnasium.com/github.com/Insynia/timeline-rails)
+[![security](https://hakiri.io/github/Insynia/timeline-rails/master.svg)](https://hakiri.io/github/Insynia/timeline-rails/master)
 
 # Timeline::Rails
 
