@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Timeline::Rails do
+describe TimelineRails do
   it 'has a version number' do
-    expect(Timeline::Rails::VERSION).not_to be nil
+    expect(TimelineRails::VERSION).not_to be nil
   end
 end

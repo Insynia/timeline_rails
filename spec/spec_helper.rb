@@ -18,4 +18,4 @@ end
 SimpleCov.start
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'timeline_rails/timeline_rails'
+require 'timeline_rails'
