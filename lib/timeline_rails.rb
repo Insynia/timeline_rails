@@ -1,3 +1,4 @@
+require 'i18n'
 require 'timeline_rails/version'
 require 'timeline_rails/view_helpers'
 require 'timeline_rails/railtie' if defined?(Rails)

@@ -1,3 +1,4 @@
+# Coverage
 require 'simplecov'
 require 'coveralls'
 
@@ -17,5 +18,13 @@ end
 
 SimpleCov.start
 
+# Combustion
+require 'combustion'
+require 'rails/generators'
+
+Combustion.initialize! :all
+
+# Tests
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
 require 'timeline_rails'
