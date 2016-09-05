@@ -6,7 +6,7 @@ module TimelineRails
 
     def timeline_wrapper(&block)
       output = '<div class="timeline">'
-      output << capture(&block)
+      output << capture(&block) if block_given?
       output << '</div>'
       raw(output)
     end

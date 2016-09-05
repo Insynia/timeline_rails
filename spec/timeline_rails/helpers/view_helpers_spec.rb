@@ -5,6 +5,7 @@ def count_substrings(str, sub)
 end
 
 describe TimelineRails::ViewHelpers, type: :helper do
+  include ActionView::Helpers
   include TimelineRails::ViewHelpers
 
   describe '#timeline_block' do
@@ -26,6 +27,18 @@ describe TimelineRails::ViewHelpers, type: :helper do
       it 'has one timeline-content tag' do
         expect(count_substrings(subject, '<div class="timeline-content">')).to eq 1
       end
+    end
+  end
+
+  describe '#timeline_wrapper' do
+    context 'when no block provided' do
+      subject { timeline_wrapper }
+
+      it 'has one timeline tag' do
+        expect(count_substrings(subject, '<div class="timeline">')).to eq 1
+      end
+
+      #TODO: Add check of yield
     end
   end
 end
