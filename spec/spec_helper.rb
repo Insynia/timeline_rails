@@ -3,7 +3,7 @@ require 'coveralls'
 
 SimpleCov.minimum_coverage 90
 SimpleCov.minimum_coverage_by_file 80
-SimpleCov.add_filter '/spec/timeline/'
+SimpleCov.add_filter '/spec/timeline_rails/'
 
 SimpleCov.formatters = [
     SimpleCov::Formatter::HTMLFormatter,
@@ -18,4 +18,4 @@ end
 SimpleCov.start
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'timeline/rails'
+require 'timeline_rails/timeline_rails'

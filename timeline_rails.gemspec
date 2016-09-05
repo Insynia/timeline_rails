@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'timeline/rails/version'
+require 'timeline_rails/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'timeline-rails'
-  spec.version       = Timeline::Rails::VERSION
+  spec.name          = 'timeline_rails'
+  spec.version       = TimelineRails::VERSION
   spec.authors       = ['Thibaut Roche']
   spec.email         = ['thibaut.roche.perso@gmail.com']
 
   spec.summary       = %q{Allows you to build a customizable vertical timeline very easily.}
   spec.description   = %q{Allows you to build a customizable vertical timeline very easily.}
-  spec.homepage      = 'https://github.com/Insynia/timeline-rails'
+  spec.homepage      = 'https://github.com/Insynia/timeline_rails'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
