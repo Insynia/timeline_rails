@@ -28,6 +28,20 @@ describe TimelineRails::ViewHelpers, type: :helper do
         expect(count_substrings(subject, '<div class="timeline-content">')).to eq 1
       end
     end
+
+    context 'when block provided' do
+      subject { timeline_block { '<div class="zbra-zbra"></div>'.html_safe } }
+
+      it 'has one zbra-zbra tag' do
+        expect(count_substrings(subject, '<div class="zbra-zbra">')).to eq 1
+      end
+
+      it 'does not have basic tags' do
+        expect(count_substrings(subject, '<div class="timeline-block">')).to eq 0
+        expect(count_substrings(subject, '<div class="timeline-circle">')).to eq 0
+        expect(count_substrings(subject, '<div class="timeline-content">')).to eq 0
+      end
+    end
   end
 
   describe '#timeline_wrapper' do
@@ -37,8 +51,14 @@ describe TimelineRails::ViewHelpers, type: :helper do
       it 'has one timeline tag' do
         expect(count_substrings(subject, '<div class="timeline">')).to eq 1
       end
+    end
 
-      #TODO: Add check of yield
+    context 'when block provided' do
+      subject { timeline_wrapper { timeline_block { '<div class="zbra-block"></div>'.html_safe } } }
+
+      it 'yields the block' do
+        expect(count_substrings(subject, '<div class="timeline"><div class="zbra-block"></div></div>')).to eq 1
+      end
     end
   end
 end

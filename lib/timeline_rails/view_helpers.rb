@@ -3,19 +3,21 @@ require 'action_view'
 module TimelineRails
   module ViewHelpers
     include ::ActionView::Helpers::OutputSafetyHelper
+    include ::ActionView::Helpers::CaptureHelper
+    include ::ActionView::Context
 
     def timeline_wrapper(&block)
       output = '<div class="timeline">'
       output << capture(&block) if block_given?
       output << '</div>'
-      raw(output)
+      output.html_safe
     end
 
-    def timeline_block(date:, title:, preview:, url:)
+    def timeline_block(date: nil, title: nil, preview: nil, url: nil, &block)
       if block_given?
-        yield
+        capture(&block).html_safe
       else
-        raw("<div class=\"timeline-block\">
+        "<div class=\"timeline-block\">
           <div class=\"timeline-circle\">
             <span>#{date.strftime('%d/%m')}</span>
           </div>
@@ -26,7 +28,7 @@ module TimelineRails
                 <span class=\"cd-date\">#{::I18n.l date, format: :short}</span>
               </div>
           </a>
-        </div>")
+        </div>".html_safe
       end
     end
   end
